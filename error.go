@@ -5,6 +5,7 @@
 package tracerr
 
 import (
+	"errors"
 	"fmt"
 	"runtime"
 )
@@ -55,6 +56,16 @@ func Wrap(err error) Error {
 	e, ok := err.(Error)
 	if ok {
 		return e
+	}
+	if wrapped := errors.Unwrap(err); wrapped != nil {
+		e, ok := wrapped.(*errorData)
+		err := fmt.Errorf("%w", Unwrap(err))
+		if ok {
+			return &errorData{
+				err:    err,
+				frames: e.frames,
+			}
+		}
 	}
 	return trace(err, 2)
 }
