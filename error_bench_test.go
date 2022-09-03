@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ztrue/tracerr"
+	"github.com/mikroskeem/tracerr"
 )
 
 func BenchmarkNew(b *testing.B) {

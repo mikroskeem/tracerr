@@ -1,7 +1,7 @@
 // Package tracerr makes error output more informative.
 // It adds stack trace to error and can display error with source fragments.
 //
-// Check example of output here https://github.com/ztrue/tracerr
+// Check example of output here https://github.com/mikroskeem/tracerr
 package tracerr
 
 import (
