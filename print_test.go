@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/logrusorgru/aurora"
+	"github.com/logrusorgru/aurora/v3"
 
 	"github.com/mikroskeem/tracerr"
 )

@@ -6,7 +6,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/logrusorgru/aurora"
+	"github.com/logrusorgru/aurora/v3"
 )
 
 // DefaultLinesAfter is number of source lines after traced line to display.
